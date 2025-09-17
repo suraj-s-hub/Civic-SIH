@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Issue - Civic Sense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">CivicSense</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#" class="active">Report Issue</a></li>
+                <li><a href="track.html">Track Issue</a></li>
+                <li><a href="guide.html">Civic Sense Guide</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Report Form Section -->
+    <section class="report-form-section">
+        <h1>Report an Issue in Your Area</h1>
+        <form id="reportForm" enctype="multipart/form-data">
+            <label for="title">Issue Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter issue title" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Describe the issue" required></textarea>
+
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select category</option>
+                <option value="Road">Road</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Water">Water</option>
+                <option value="Sanitation">Sanitation</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="Enter your location" required>
+
+            <label for="image">Upload Image (optional)</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <button type="submit" class="btn">Submit Issue</button>
+        </form>
+        <p id="successMsg" class="success-msg"></p>
+    </section>
+
+    <script src="report.js"></script>
+</body>
+</html>

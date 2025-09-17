@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Civic Sense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">CivicSense Admin</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#" class="active">Admin Panel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="admin-dashboard">
+        <h1>Reported Issues Dashboard</h1>
+
+        <!-- Search and Filter -->
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search by title or user">
+            <select id="statusFilter">
+                <option value="all">All Status</option>
+                <option value="Submitted">Submitted</option>
+                <option value="Under Review">Under Review</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Resolved">Resolved</option>
+            </select>
+        </div>
+
+        <!-- Issues Table -->
+        <table id="issuesTable">
+            <thead>
+                <tr>
+                    <th>Issue ID</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Submitted By</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example data -->
+                <tr>
+                    <td>001</td>
+                    <td>Pothole on Main Street</td>
+                    <td>Road</td>
+                    <td>John Doe</td>
+                    <td>16-09-2025</td>
+                    <td class="status">Submitted</td>
+                    <td>
+                        <select class="updateStatus">
+                            <option value="Submitted">Submitted</option>
+                            <option value="Under Review">Under Review</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Resolved">Resolved</option>
+                        </select>
+                        <button class="updateBtn">Update</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Street light not working</td>
+                    <td>Electricity</td>
+                    <td>Jane Smith</td>
+                    <td>15-09-2025</td>
+                    <td class="status">Under Review</td>
+                    <td>
+                        <select class="updateStatus">
+                            <option value="Submitted">Submitted</option>
+                            <option value="Under Review">Under Review</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Resolved">Resolved</option>
+                        </select>
+                        <button class="updateBtn">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>
